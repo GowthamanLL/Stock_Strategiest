@@ -93,7 +93,7 @@ def preprocessdata(symbol,region,next,choose):
         )
 
         # Train the model
-        model.fit(X_train, y_train, epochs=50, batch_size=32 ,validation_data=(X_test,y_test),callbacks=[early_stopping])
+        model.fit(X_train, y_train, epochs=100, batch_size=32 ,validation_data=(X_test,y_test),callbacks=[early_stopping])
 
         # Evaluate the model
         loss = model.evaluate(X_test, y_test)
